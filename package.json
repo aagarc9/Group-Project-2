@@ -12,5 +12,23 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "group-project-2",
+  "description": "[Link to GitHub Repo](https://github.com/aagarc9/Group-Project-2)</br>\r [Link to HEROKU Deploy]()",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aagarc9/Group-Project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aagarc9/Group-Project-2/issues"
+  },
+  "homepage": "https://github.com/aagarc9/Group-Project-2#readme"
 }
