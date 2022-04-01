@@ -14,7 +14,8 @@
     "sequelize": "^6.17.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "name": "group-project-2",
   "description": "[Link to GitHub Repo](https://github.com/aagarc9/Group-Project-2)</br>\r [Link to HEROKU Deploy]()",
