@@ -45,10 +45,10 @@ let Game = {
         getArena.style.visibility = `visible`;
     },
     setFight: function() {
+
         let getHeader = document.querySelector('.header');
         let getActions = document.querySelector('.actions');
         let getEnemy = document.querySelector('.enemy');
-        
         //Enemy Types
         let enemy000 = new Enemy('Slime', 100, 0, 100, 50, 25);
         // let enemy001 = new Enemy('Wolf', 250, 0, 100, 100, 100);
@@ -64,8 +64,13 @@ let Game = {
         console.log(enemy.health)
         console.log(enemy.classType)
 
+        let combatTurn = new CombatTurn({
+            player: this.player,
+            enemy: this.enemy
+        })
+
         getHeader.innerHTML = `<p>Choose Your Action!</p>`;
-        getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()"> Attack!</a>`;
+        getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="${combatTurn}.calcAttack()"> Attack!</a>`;
         getEnemy.innerHTML = `
         <img src="./images/enemies/${enemy.classType}.png" alt="${enemy.classType}" class="img-avatar>
         <div>
@@ -76,8 +81,10 @@ let Game = {
         <p>Agility: ${enemy.agility}</p>
         <p>Speed: ${enemy.speed}</p>
         </div>`
+
         },
-    
+        
+        
 
     }
     
