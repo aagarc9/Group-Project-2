@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Engine</title>
+    <script src="./Game.js"></script>
+    <script src="./Enemy.js"></script>
+    <script src="./Player.js"></script>
+</head>
+<body>
+    
+    <div class="header"></div>
+
+    <div class="Characters">
+        <a href="#" onclick="Game.gameStart(`Aspiring_Hero`)">
+            <img src="./images/heroes/aspiring_hero.png" alt="aspiringHero">
+            <div>
+                <h3>Aspiring Hero</h3>
+                <p>Picking up your father's rusted sword, you set out to become a great hero!</p>
+            </div>
+        </a>
+        <a href="#" onclick="Game.gameStart('Warrior')">
+            <img src="./images/heroes/archer.png" alt="Warrior">
+            <div>
+                <h3>Warrior</h3>
+                <p>With sword and shield in hand, you are a frontline warrior wading through the thick of battle.</p>
+            </div>
+        </a>
+        <a href="#" onclick="Game.gameStart('Archer')">
+            <img src="./images/heroes/warrior.png" alt="Archer">
+            <div>
+                <h3>Archer</h3>
+                <p>Bow in hand, you send down death from afar.</p>
+            </div>
+        </a>
+        <a href="#" onclick="Game.gameStart('Slime')">
+            <img src="./images/enemies/slime.png" alt="Slime">
+            <div>
+                <h3>Slime</h3>
+                <p>A gross slime</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="actions"></div>
+    <div class="arena"></div>
+    <div class="enemy"></div>
+
+</body>
+</html>
