@@ -10,17 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/26888296ba.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./css/jass.css">
-<!-- <link rel="stylesheet" href="./css/style.css"> -->
+<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
   <div class="header">
     <nav class="navbar navbar-default">
     <h2>
     <i class="fa-brands fa-fort-awesome"></i>
     <a href="/">Pixel Warrior!</a>
-    </h2>
+    </h2> 
       <ul class="nav justify-content-end">
         <li class="nav-item">
             {{#if logged_in}}
@@ -34,10 +32,17 @@
       {{/if}}
     </nav>
   </div>
-  <div class="intro">
-    
-  </div>
- <main class="container container-fluid mt-5">
+  <div class="intro"></div>
+
+  <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
+    <footer>
+      
+    </footer>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
