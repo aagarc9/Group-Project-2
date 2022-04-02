@@ -25,6 +25,9 @@
 //         this.enemyAttack()
 //         let playerSpeed = this.player.speed;
 //         let enemySpeed = this.enemy.speed;
+//         let getPlayerHealth = document.querySelector('.health-player')
+//         let getEnemyHealth = document.querySelector('.health-enemy')
+    
 
 //         if (playerSpeed >= enemySpeed) {
 //             let playerAttackValues = this.playerAttack();
@@ -33,21 +36,20 @@
 //             let enemyTotalDamage = enemyAttackValues[0] * enemyAttackValues[1];
 //             this.enemy.health = this.enemy.health - playerTotalDamage;
 //             alert(`Player hits the enemy for ${playerTotalDamage} damage.`)
-//             if (this.enemy.health <= 0) {
-//                 alert(`The ${enemy.classType} has been defeated!`);
-//                 getPlayerHealth.innerHTML = `Health: + ${this.player.health}`
+//             if (enemy.health <= 0) {
+//                 alert(`The ${classType} has been defeated!`);
+//                 getPlayerHealth.innerHTML = `Health: + ${player.health}`
 //                 getEnemyHealth.innerHTML = `Health: 0`;
 //             } else {
-//                 getEnemyHealth.innerHTML = `Health: ${this.enemy.health}`
-
-//                 this.player.health = this.player.health - enemyTotalDamage;
-//                 alert(`${this.enemy.classType} hits the player for ${enemyTotalDamage} damage.`)
-//                 if (this.player.health <= 0) {
+//                 getEnemyHealth.innerHTML = `Health: ${enemy.health}`
+//                 player.health = player.health - enemyTotalDamage;
+//                 alert(`${enemy.classType} hits the player for ${enemyTotalDamage} damage.`)
+//                 if (player.health <= 0) {
 //                     alert(`You have been defeated!`);
 //                     getPlayerHealth.innerHTML = `Health: 0`;
-//                     getEnemyHealth.innerHTML = `Health: + ${this.enemy.health}`
+//                     getEnemyHealth.innerHTML = `Health: + ${enemy.health}`
+//                 } else getPlayerHealth.innerHTML = `Health: ${player.health}`
 //             }
 //         }
-//     }
 //     }
 // }
