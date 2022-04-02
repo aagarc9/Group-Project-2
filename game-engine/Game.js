@@ -8,16 +8,16 @@ let Game = {
         console.log(classType)
         switch (classType) {
             case "Aspiring_Hero":
-                player = new Player(classType, 200, 0, 200, 100, 50);
+                player = new Player(classType, 200, 0, 200, 100, 0, 50);
                 break;
             case "Warrior":
-                player = new Player(classType, 300, 0, 300, 100, 50);
+                player = new Player(classType, 300, 0, 300, 100, 20, 50);
                 break;
             case "Archer":
-                player = new Player(classType, 250, 0, 200, 200, 100);
+                player = new Player(classType, 250, 0, 200, 200, 10, 100);
                 break;
             case "Slime":
-                player = new Player(classType, 100, 0, 100, 100, 25);
+                player = new Player(classType, 150, 0, 200, 100, 0, 25);
                 break;    
         }
         console.log(player)
@@ -25,10 +25,11 @@ let Game = {
         getInterface.innerHTML = `
             <img src="./images/heroes/${classType.toLowerCase()}.png" class="img-heroes">
             <div><h3> ${classType}</h3>
-            <p>Health: ${player.health}</p>
+            <p class="health-player">Health: ${player.health}</p>
             <p>Mana: ${player.mana}</p>
             <p>Strength: ${player.strength}</p>
             <p>Agility: ${player.agility}</p>
+            <p>Defense: ${player.defense}</p>
             <p>Speed: ${player.speed}</p></div> 
            ` 
     },
@@ -50,9 +51,9 @@ let Game = {
         let getActions = document.querySelector('.actions');
         let getEnemy = document.querySelector('.enemy');
         //Enemy Types
-        let enemy000 = new Enemy('Slime', 100, 0, 100, 50, 25);
-        // let enemy001 = new Enemy('Wolf', 250, 0, 100, 100, 100);
-        // let enemy002 = new Enemy('Bandit', 400, 0, 200, 100, 50);
+        let enemy000 = new Enemy('Slime', 200, 0, 200, 50, 1, 25);
+        let enemy001 = new Enemy('Wolf', 250, 0, 100, 100, 100);
+        let enemy002 = new Enemy('Bandit', 400, 0, 200, 100, 50);
 
         // if(floor3) {
         //     enemy = enemy002}
@@ -64,23 +65,20 @@ let Game = {
         console.log(enemy.health)
         console.log(enemy.classType)
 
-        let combatTurn = new CombatTurn({
-            player: this.player,
-            enemy: this.enemy
-        })
-
         getHeader.innerHTML = `<p>Choose Your Action!</p>`;
-        getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="${combatTurn}.calcAttack()"> Attack!</a>`;
+        getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="combatTurn.calcAttack()"> Attack!</a>`;
         getEnemy.innerHTML = `
-        <img src="./images/enemies/${enemy.classType}.png" alt="${enemy.classType}" class="img-avatar>
+        <img src="./images/enemies/${enemy.classType}.png" alt="${enemy.classType}" class="img-avatar">
         <div>
         <h3>${enemy.classType}</h3>
-        <p class="health-enemy>Health: ${enemy.health}</p>
+        <p class="health-enemy">Health: ${enemy.health}</p>
         <p>Mana: ${enemy.mana}</p>
         <p>Strength: ${enemy.strength}</p>
         <p>Agility: ${enemy.agility}</p>
+        <p>Defense: ${enemy.defense}</p>
         <p>Speed: ${enemy.speed}</p>
-        </div>`
+        </div>
+        `
 
         },
         
