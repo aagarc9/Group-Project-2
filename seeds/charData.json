@@ -1,0 +1,35 @@
+[
+    {
+        "character_name": "Aspiring Hero",
+        "classType": "Hero",
+        "health": 200,
+        "mana": 0,
+        "strength": 200,
+        "agility": 100,
+        "defense": 0,
+        "speed": 50,
+        "user_id": 1
+    },
+    {
+        "character_name": "Warrior",
+        "classType": "Warrior",
+        "health": 300,
+        "mana": 0,
+        "strength": 300,
+        "agility": 100,
+        "defense": 20,
+        "speed": 50,
+        "user_id": 2
+    },
+    {
+        "character_name": "Archer",
+        "classType": "Archer",
+        "health": 250,
+        "mana": 0,
+        "strength": 200,
+        "agility": 200,
+        "defense": 10,
+        "speed": 100,
+        "user_id": 1
+    }
+]
