@@ -50,7 +50,7 @@ let Game = {
         //Enemy Types
         let enemy000 = new Enemy('Slime', 200, 0, 200, 50, 5, 25);
         let enemy001 = new Enemy('Wolf', 250, 0, 100, 100, 0, 100);
-        let enemy002 = new Enemy('Bandit', 400, 0, 200, 100, 0, 50);
+        let enemy002 = new Enemy('Bandit', 400, 0, 200, 200, 0, 50);
         
 
         let floor = floorChoice
