@@ -63,7 +63,30 @@ calcAttack: function() {
                 getPlayerHealth.innerHTML = `Health: 0`;
                 getEnemyHealth.innerHTML = `Health: + ${enemy.health}`
             } else getPlayerHealth.innerHTML = `Health: ${player.health}`
+        }
+    } 
+    // else if (playerSpeed <= enemySpeed) {
+    //     let playerAttackValues = playerAttack();
+    //     let playerTotalDamage = playerAttackValues[0] * playerAttackValues[1];
+    //     let enemyAttackValues = enemyAttack();
+    //     let enemyTotalDamage = enemyAttackValues[0] * enemyAttackValues[1];
+    //     enemy.health = enemy.health - playerTotalDamage;
+
+    //     alert(`Player hits the enemy for ${playerTotalDamage} damage.`)
+
+    //     if (enemy.health <= 0) {
+    //         alert(`The ${classType} has been defeated!`);
+    //         getPlayerHealth.innerHTML = `Health: + ${player.health}`
+    //         getEnemyHealth.innerHTML = `Health: 0`;
+    //     } else {
+    //         getEnemyHealth.innerHTML = `Health: ${enemy.health}`
+    //         player.health = player.health - enemyTotalDamage;
+    //         alert(`${enemy.classType} hits the player for ${enemyTotalDamage} damage.`)
+    //         if (player.health <= 0) {
+    //             alert(`You have been defeated!`);
+    //             getPlayerHealth.innerHTML = `Health: 0`;
+    //             getEnemyHealth.innerHTML = `Health: + ${enemy.health}`
+    //         } else getPlayerHealth.innerHTML = `Health: ${player.health}`
     }
 }
-}
-}
+

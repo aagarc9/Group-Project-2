@@ -16,14 +16,11 @@ let Game = {
             case "Archer":
                 player = new Player(classType, 250, 0, 200, 200, 10, 100);
                 break;
-            case "Slime":
-                player = new Player(classType, 150, 0, 200, 100, 0, 25);
-                break;    
         }
         console.log(player)
         let getInterface = document.querySelector('.Characters');
         getInterface.innerHTML = `
-            <img src="./images/heroes/${classType.toLowerCase()}.png" class="img-heroes">
+            <img src="./images/heroes/${classType.toLowerCase()}_idle.png" class="img-heroes">
             <div><h3> ${classType}</h3>
             <p class="health-player">Health: ${player.health}</p>
             <p>Mana: ${player.mana}</p>
@@ -39,28 +36,32 @@ let Game = {
         let getArena = document.querySelector('.arena');
         getHeader.innerHTML = `<p> Choose your floor</p>`;
         getActions.innerHTML = `
-        <a href="#" class="btn-floor floor1" onclick="Game.setFight()">Floor 1</a>
-        <a href="#" class="btn-floor floor2" onclick="Game.setFight()">Floor 2</a>
-        <a href="#" class="btn-floor floor3" onclick="Game.setFight()">Floor 3</a>
+        <a href="#" class="btn-floor floor1" onclick="Game.setFight(1)">Floor 1</a>
+        <a href="#" class="btn-floor floor2" onclick="Game.setFight(2)">Floor 2</a>
+        <a href="#" class="btn-floor floor3" onclick="Game.setFight(3)">Floor 3</a>
         `;
         getArena.style.visibility = `visible`;
     },
-    setFight: function() {
+    setFight: function(floorChoice) {
 
         let getHeader = document.querySelector('.header');
         let getActions = document.querySelector('.actions');
         let getEnemy = document.querySelector('.enemy');
         //Enemy Types
-        let enemy000 = new Enemy('Slime', 200, 0, 200, 50, 1, 25);
-        let enemy001 = new Enemy('Wolf', 250, 0, 100, 100, 100);
-        let enemy002 = new Enemy('Bandit', 400, 0, 200, 100, 50);
+        let enemy000 = new Enemy('Slime', 200, 0, 200, 50, 5, 25);
+        let enemy001 = new Enemy('Wolf', 250, 0, 100, 100, 0, 100);
+        let enemy002 = new Enemy('Bandit', 400, 0, 200, 100, 0, 50);
+        
 
-        // if(floor3) {
-        //     enemy = enemy002}
-        // else if (floor2) {
-        //     enemy = enemy001}
-        // else 
+        let floor = floorChoice
+        console.log(floor)
+        if(floor == 3) {
+            enemy = enemy002}
+        else if (floor == 2) {
+            enemy = enemy001}
+        else 
         enemy = enemy000
+
         console.log(enemy)
         console.log(enemy.health)
         console.log(enemy.classType)
@@ -68,7 +69,7 @@ let Game = {
         getHeader.innerHTML = `<p>Choose Your Action!</p>`;
         getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="combatTurn.calcAttack()"> Attack!</a>`;
         getEnemy.innerHTML = `
-        <img src="./images/enemies/${enemy.classType}.png" alt="${enemy.classType}" class="img-avatar">
+        <img src="./images/enemies/${enemy.classType}_idle.png" alt="${enemy.classType}" class="img-avatar">
         <div>
         <h3>${enemy.classType}</h3>
         <p class="health-enemy">Health: ${enemy.health}</p>
@@ -79,7 +80,6 @@ let Game = {
         <p>Speed: ${enemy.speed}</p>
         </div>
         `
-
         },
         
         
