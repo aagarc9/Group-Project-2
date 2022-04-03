@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/26888296ba.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../../public/css/style.css">
-<link rel="stylesheet" href="../../public/css/normalize.css">
+<link rel="stylesheet" href="css/{{style}}">
+<link rel="stylesheet" href="css/normalize.css">
 </head>
 
   <div class="header">
@@ -33,17 +33,15 @@
       {{/if}}
     </nav>
   </div>
-  <div class="intro"></div>
 
-  <main class="container container-fluid mt-5">
+  <main class="homepage">
+     <div class="intro"></div>
       <!-- Render the sub layout -->
       {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
+  </main>
+    
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="../../public/js/logout.js"></script>
+  <script src="js/logout.js"></script>
   {{/if}}
 

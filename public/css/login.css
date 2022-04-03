@@ -9,12 +9,6 @@
   box-sizing: border-box;
 }
 
-html {
-    line-height: 1.15;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
-}
 
 body {
     margin: 0;
@@ -32,22 +26,38 @@ i {
     margin-bottom: 2px;
 }
 
-/* .intro {
-    background: url("https://thumbs.dreamstime.com/b/forest-game-background-d-application-vector-design-tileable-horizontally-size-ready-parallax-effect-47652714.jpg");
-    width: 100%;
-    height: 600px; */
-/* } */
-
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    margin-top: 50px;
+    padding: 50px;
 }    
 
+.row h2 {
+    margin: 10px;
+    padding: 10px;
+}
 input {
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     width: 400px;
     height: 30px;
+}
+
+#email-login {
+    margin-left: 35px;
+}
+
+#name-signup {
+    margin-left: 47px;
+}
+
+#email-signup {
+    margin-left: 35px;
+}
+
+.row button {
+    margin-top: 20px;
 }

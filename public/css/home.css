@@ -1,0 +1,37 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+i {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+}
+
+.homepage {
+    display: flex;
+    background: url("http://wallpaperheart.com/wp-content/uploads/2018/04/video-game-wallpapers-background.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    padding: 200px;   
+}
+
+.mainPage {
+    color: brown;
+}
+
