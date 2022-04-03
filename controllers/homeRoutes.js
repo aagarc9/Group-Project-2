@@ -1,24 +1,13 @@
 const router = require("express").Router();
 
-const { User, Weapon } = require("../models");
-const withAuth = require("../utils/auth");
+const { User } = require('../models/User');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const weaponData = await Weapon.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        });
-
-        const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
-
         res.render('homepage', {
-            weapons,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            style: 'home.css'
         });
     } catch (err) {
         res.status(500).json(err);
@@ -38,7 +27,8 @@ router.get('/profile', withAuth, async (req, res) => {
   
       res.render('profile', {
         ...user,
-        logged_in: true
+        logged_in: true,
+        style: 'game.css'
       });
     } catch (err) {
       res.status(500).json(err);
@@ -52,7 +42,9 @@ router.get('/login', (req, res) => {
       return;
     }
   
-    res.render('login');
+    res.render('login', {
+      style: 'login.css'
+    });
 });
 
 module.exports = router;

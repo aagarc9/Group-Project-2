@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Weapon } = require('../../models');
+const { Char } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newWeapon = await Weapon.create({
+    const newChar = await Char.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newWeapon);
+    res.status(200).json(newChar);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const weaponData = await Weapon.destroy({
+    const charData = await Char.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!weaponData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!charData) {
+      res.status(404).json({ message: 'No character found with this id!' });
       return;
     }
 
-    res.status(200).json(weaponData);
+    res.status(200).json(charData);
   } catch (err) {
     res.status(500).json(err);
   }

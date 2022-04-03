@@ -1,8 +1,8 @@
-const sequelize = require("../config/connection");
-const { User } = require("../models");
+const sequelize = require('../config/connection');
+const { User, Char } = require('../models');
 
 const userData = require("./userData.json");
-// const weaponData = require("./weaponData.json");
+const charData = require('./charData.json');
 
 const seedDatabase = async () => {
         await sequelize.sync({ force: true });
@@ -11,10 +11,13 @@ const seedDatabase = async () => {
             individualHooks: true,
             returning: true,
         });
-    
-        process.exit(0);
-    
-    
+
+        const char = await Char.bulkCreate(charData);
+
+    } catch (err) {
+        console.log(err)
+    };
+    process.exit(0);
 };
 
 seedDatabase();
