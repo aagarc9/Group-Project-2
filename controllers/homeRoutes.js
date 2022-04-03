@@ -1,23 +1,11 @@
 const router = require("express").Router();
 
-const { User, Weapon } = require("../models");
-const withAuth = require("../utils/auth");
+const { User } = require('../models/User');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const weaponData = await Weapon.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        });
-
-        const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
-
         res.render('homepage', {
-            weapons,
             logged_in: req.session.logged_in
         });
     } catch (err) {

@@ -1,22 +1,36 @@
- <div class="header"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Engine</title>
+    <script src="../game-engine/CombatTurn.js"></script>
+    <script src="../game-engine/Game.js"></script>
+    <script src="../game-engine/Enemy.js"></script>
+    <script src="../game-engine/Player.js"></script>
+</head>
+<body>
+    
+    <div class="header"></div>
 
     <div class="Characters">
         <a href="#" onclick="Game.gameStart(`Aspiring_Hero`)">
-            <img src="/public/images/heroes/Aspiring_Hero_idle.png" alt="aspiringHero" style="transform: scale(2)">
+            <img src="./images/heroes/Aspiring_Hero_idle.png" alt="aspiringHero" style="transform: scale(2)">
             <div>
                 <h3>Aspiring Hero</h3>
                 <p>Picking up your father's rusted sword, you set out to become a great hero!</p>
             </div>
         </a>
         <a href="#" onclick="Game.gameStart('Warrior')">
-            <img src="/public/images/heroes/Warrior_idle.png" alt="Warrior" style="transform: scale(2)">
+            <img src="./images/heroes/archer_idle.png" alt="Warrior" style="transform: scale(2)">
             <div>
                 <h3>Warrior</h3>
                 <p>With sword and shield in hand, you are a frontline warrior wading through the thick of battle.</p>
             </div>
         </a>
         <a href="#" onclick="Game.gameStart('Archer')">
-            <img src="/public/images/heroes/Archer_idle.png" alt="Archer" style="transform: scale(2)">
+            <img src="./images/heroes/warrior_idle.png" alt="Archer" style="transform: scale(2)">
             <div>
                 <h3>Archer</h3>
                 <p>Bow in hand, you send down death from afar.</p>
@@ -27,3 +41,6 @@
     <div class="actions"></div>
     <div class="arena"></div>
     <div class="enemy"></div>
+
+</body>
+</html>
