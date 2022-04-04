@@ -27,6 +27,11 @@ Enemy.init(
                 isAlpha: true,
             },
         },
+        classDesc: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            unique: true,
+        },
         health: {
             type: DataTypes.INTEGER,
             allowNull: false,
