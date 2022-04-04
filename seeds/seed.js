@@ -8,13 +8,13 @@ const seedDatabase = async () => {
     try {
         await sequelize.sync({ force: true });
         
-        const users = await User.bulkCreate(userData, {
+         await User.bulkCreate(userData, {
             individualHooks: true,
             returning: true,
         });
 
-        const char = await Char.bulkCreate(charData);
-
+         await Char.bulkCreate(charData);
+        
     } catch (err) {
         console.log(err)
     };
