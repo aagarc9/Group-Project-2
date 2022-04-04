@@ -1,42 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Engine</title>
-    <script src="../game-engine/CombatTurn.js"></script>
-    <script src="../game-engine/Game.js"></script>
-    <script src="../game-engine/Enemy.js"></script>
-    <script src="../game-engine/Player.js"></script>
-</head>
-<body>
-    
-    <div class="header"></div>
 
+    <div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
+
+
+  {{#if chars.length}}
+  <div class="char-list">
+      {{#each chars as |char}}
     <div class="Characters">
-        <a href="#" onclick="Game.gameStart(`Aspiring_Hero`)">
-            <img src="./images/heroes/Aspiring_Hero_idle.png" alt="aspiringHero" style="transform: scale(2)">
+        <a href="#" onclick="Game.gameStart(`{{char.classType}}`)">
+            <img class="char-img" src="../public/images/heroes/{{char.classType}}_idle.png" alt="{{char.classType}}" style="transform: scale(2)">
             <div>
-                <h3>Aspiring Hero</h3>
-                <p>Picking up your father's rusted sword, you set out to become a great hero!</p>
+                <h2>{{char.character_name}}</h2>
+                <h3>{{char.classType}}</h3>
+                <p>{{char.classDesc}}</p>
             </div>
         </a>
-        <a href="#" onclick="Game.gameStart('Warrior')">
-            <img src="./images/heroes/archer_idle.png" alt="Warrior" style="transform: scale(2)">
-            <div>
-                <h3>Warrior</h3>
-                <p>With sword and shield in hand, you are a frontline warrior wading through the thick of battle.</p>
-            </div>
-        </a>
-        <a href="#" onclick="Game.gameStart('Archer')">
-            <img src="./images/heroes/warrior_idle.png" alt="Archer" style="transform: scale(2)">
-            <div>
-                <h3>Archer</h3>
-                <p>Bow in hand, you send down death from afar.</p>
-            </div>
-        </a>
+    {{/each}}
     </div>
+  {{/if}}
 
     <div class="actions"></div>
     <div class="arena"></div>
