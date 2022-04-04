@@ -33,7 +33,7 @@ User.init(
             allowNull: false,
             unique: true,
             validate: {
-                len: [8],
+                len: [10],
             },
         },
     },
