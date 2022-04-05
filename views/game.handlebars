@@ -1,11 +1,11 @@
 
-  <div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
+<div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
 
 
-  {{#if playerchars.length}}
-  <div class="char-list">
+{{#if playerchars.length}}
+  <div class="Characters"> Please the character you would like to use.
       {{#each playerchars as |playerchar|}}
-    <div class="Characters">
+    <div class="playerchar">
         <a href="#" onclick="Game.gameStart(`{{playerchar.classType}}`)">
             <img class="char-img" src="/images/heroes/{{playerchar.classType}}_idle.png" alt="{{playerchar.classType}}" style="transform: scale(2)">
             <div>
@@ -14,13 +14,12 @@
                 <p>{{playerchar.classDesc}}</p>
             </div>
         </a>
+      </div>
     {{/each}}
     </div>
-  {{/if}}
-
     <div class="actions"></div>
     <div class="arena"></div>
     <div class="enemy"></div>
+{{/if}}
 
-</body>
-</html>
+
