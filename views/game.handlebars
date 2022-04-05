@@ -1,6 +1,19 @@
 
 <div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
 
+  <div class="col-md-6 charCreate">
+    <h3>Create a New Character:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="char-name">Character Name:</label>
+        <input class="form-input" type="text" id="char-name" name="char-name" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
 
 {{#if playerchars.length}}
   <div class="Characters"> Please the character you would like to use.
