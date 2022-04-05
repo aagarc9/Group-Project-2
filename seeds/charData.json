@@ -1,7 +1,7 @@
 [
     {
         "character_name": "Aspiring Hero",
-        "classType": "Hero",
+        "classType": "Aspiring_Hero",
         "classDesc": "Picking up your father's old sword, you have set out to become a hero.",
         "health": 200,
         "mana": 0,
@@ -21,7 +21,7 @@
         "agility": 100,
         "defense": 20,
         "speed": 50,
-        "user_id": 2
+        "user_id": 1
     },
     {
         "character_name": "Archer",
@@ -33,6 +33,6 @@
         "agility": 200,
         "defense": 10,
         "speed": 100,
-        "user_id": 1
+        "user_id": 2
     }
 ]
