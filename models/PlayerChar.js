@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Char extends Model {}
+class PlayerChar extends Model {}
 
-Char.init(
+PlayerChar.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -23,6 +23,11 @@ Char.init(
             validate: {
                 isAlpha: true,
             },
+        },
+        classDesc: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            unique: true,
         },
         health: {
             type: DataTypes.INTEGER,
@@ -80,8 +85,8 @@ Char.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'char',
+        modelName: 'playerchar',
     }
 );
 
-module.exports = Char;
+module.exports = PlayerChar;

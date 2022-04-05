@@ -1,7 +1,8 @@
 [
     {
         "character_name": "Aspiring Hero",
-        "classType": "Hero",
+        "classType": "Aspiring_Hero",
+        "classDesc": "Picking up your father's old sword, you have set out to become a hero.",
         "health": 200,
         "mana": 0,
         "strength": 200,
@@ -13,23 +14,25 @@
     {
         "character_name": "Warrior",
         "classType": "Warrior",
+        "classDesc": "With sword and shield in hand, you are usually found in the thick of battle.",
         "health": 300,
         "mana": 0,
         "strength": 300,
         "agility": 100,
         "defense": 20,
         "speed": 50,
-        "user_id": 2
+        "user_id": 1
     },
     {
         "character_name": "Archer",
         "classType": "Archer",
+        "classDesc": "Bow in hand and sword on your hip, you are a fearsome fighter, raining death from afar.",
         "health": 250,
         "mana": 0,
         "strength": 200,
         "agility": 200,
         "defense": 10,
         "speed": 100,
-        "user_id": 1
+        "user_id": 2
     }
 ]

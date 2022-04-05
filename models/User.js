@@ -33,7 +33,7 @@ User.init(
             allowNull: false,
             unique: true,
             validate: {
-                notEmpty: true,
+                len: [6],
             },
         },
     },
@@ -56,4 +56,4 @@ User.init(
     }
 );
 
-module.exports = User
+module.exports = User;
