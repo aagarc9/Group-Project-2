@@ -88,7 +88,6 @@ i {
 }
 
 .arena {
-    display: flex;
     background: url("https://i.pinimg.com/originals/64/25/87/64258791ae25c63758d3b1c751dc96b9.jpg");
 }
 
@@ -124,8 +123,3 @@ i {
     list-style: none;
 }
 
-.gamePlay {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
