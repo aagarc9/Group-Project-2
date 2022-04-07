@@ -1,23 +1,35 @@
 
 <div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
 
-  <div class="col-md-6 charCreate">
-    <h3>Create a New Character:</h3>
-
-    <form class="form new-project-form">
+  <div class="col-lg-3 col-md-6 col-sm-12 border p-2 text-center" id="createCharacter">
+    <p>Create a new character!</p>
+    <form class="form new-character-form">
       <div class="form-group">
-        <label for="char-name">Character Name:</label>
+        <label for="char-name">Name new character:</label>
         <input class="form-input" type="text" id="char-name" name="char-name" />
       </div>
       <div class="form-group">
+        <label for="project-desc">New character description:</label>
+        <textarea class="form-input" id="char-desc" name="char-desc"></textarea>
+      </div>
+      <select class="form-select" aria-label="class-selection" id="class-selection">
+        <option selected>Select character class</option>
+        <option value="1">Aspiring Hero</option>
+        <option value="2">Warrior</option>
+        <option value="3">Archer</option>
+      </select>
+      <div class="form-group container text-center">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
   </div>
 
+
 {{#if playerchars.length}}
+
 <div class="arena">
   <div class="Characters"> Please select the character you would like to use.
+
       {{#each playerchars as |playerchar|}}
     <div class="playerchar">
         <a href="#" onclick="Game.gameStart(`{{playerchar.classType}}`)">
@@ -26,6 +38,9 @@
                 <h2>{{playerchar.character_name}}</h2>
                 <h3>{{playerchar.classType}}</h3>
                 <p>{{playerchar.classDesc}}</p>
+            </div>
+            <div class="col-sm-3">
+              <button class="btn btn-sm btn-danger" data-id="{{playerchar.id}}">DELETE</button>
             </div>
         </a>
       </div>
@@ -38,5 +53,4 @@
     {{!-- <div class="enemy"></div> --}}
     </div>
 {{/if}}
-
 
