@@ -40,7 +40,7 @@ let Game = {
         let getArena = document.querySelector('.arena');
         let getCharCreate = document.querySelector('.charCreate');
         getCharCreate.style.display = 'none';
-        // getHeader.innerHTML = `<p> Choose the floor you would like to challenge! </p>`;
+        getHeader.innerHTML = `<p> Choose the floor you would like to challenge! </p>`;
 
         // function textMessage(resolve) {
         //     const message = new TextMessage({
