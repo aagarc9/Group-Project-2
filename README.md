@@ -1,4 +1,4 @@
-# Group-Project-2: RPG Battler
+# Group-Project-2: Pixel Warrior!
 
 ## Links
 [Link to GitHub Repo](https://github.com/aagarc9/Group-Project-2)</br>
@@ -13,8 +13,7 @@
 [Credits](#credits-and-contributors)</br>
 [License](#license)</br>
 ## Description and elevator pitch
-
-## User Story
+This is an GAME API, where a USER can signup, name a character, and select a class and preserve user info in a database. 
 
 ## NPM requirements
 |  |  |  |
@@ -31,10 +30,11 @@
 ## Credits and Contributors
 | Name | Link to GitHub Profile |
 | :---: | :---: |
-| Andrew Garcia | |
-| Edwin Fame | |
-|Marc Cabal |
-|Andrew Ngo | [GitHub Profile](https://github.com/MiinoSil) |
+| Andrew Garcia | [GitHub Profile](https://github.com/aagarc9) |
+| Edwin Fame | [GitHub Profile](https://github.com/Famesmyname) |
+| Marc Cabal | [GitHub Profile](https://github.com/MCabal77) |
+| Aldreane | |
+| Andrew Ngo | [GitHub Profile](https://github.com/MiinoSil) |
 
 ## License
 
