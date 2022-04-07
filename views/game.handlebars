@@ -1,16 +1,12 @@
 
 <div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
 
-  <div class="col-lg-3 col-md-6 col-sm-12 border p-2 text-center" id="createCharacter">
+  <div class="col-lg-3 col-md-6 col-sm-12 border p-2 text-center charCreate" id="createCharacter">
     <p>Create a new character!</p>
     <form class="form new-character-form">
       <div class="form-group">
         <label for="char-name">Name new character:</label>
         <input class="form-input" type="text" id="char-name" name="char-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">New character description:</label>
-        <textarea class="form-input" id="char-desc" name="char-desc"></textarea>
       </div>
       <select class="form-select" aria-label="class-selection" id="class-selection">
         <option selected>Select character class</option>
@@ -45,8 +41,8 @@
         </a>
       </div>
     {{/each}}
+  </div>
     <div class="enemy"></div>
-    </div>
     </div>
     <div class="gamePlay">
     <div class="actions"></div>
