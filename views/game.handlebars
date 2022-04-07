@@ -16,7 +16,8 @@
   </div>
 
 {{#if playerchars.length}}
-  <div class="Characters"> Please the character you would like to use.
+<div class="arena">
+  <div class="Characters"> Please select the character you would like to use.
       {{#each playerchars as |playerchar|}}
     <div class="playerchar">
         <a href="#" onclick="Game.gameStart(`{{playerchar.classType}}`)">
@@ -29,10 +30,13 @@
         </a>
       </div>
     {{/each}}
-    </div>
-    <div class="actions"></div>
-    <div class="arena"></div>
     <div class="enemy"></div>
+    </div>
+    </div>
+    <div class="gamePlay">
+    <div class="actions"></div>
+    {{!-- <div class="enemy"></div> --}}
+    </div>
 {{/if}}
 
 
