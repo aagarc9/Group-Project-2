@@ -2,9 +2,9 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const name = document.querySelector('#char-name').value.trim();
-    const characterClass = document.querySelector('#class-selection').value.trim();
+    const classType = document.querySelector('#class-selection').value.trim();
   
-    if (name && characterClass) {
+    if (name && classType) {
       const response = await fetch(`/api/characters`, {
         method: 'POST',
         body: JSON.stringify({ name, classType }),

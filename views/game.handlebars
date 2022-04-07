@@ -1,21 +1,21 @@
 
 <div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
 
-  <div class="container col-12 border p-2" id="createCharacter">
-    <p>Create a new character!</p>
-    <form class="form new-character-form">
+  <div class="container col-12 border p-2 text-center" id="createCharacter">
+    <h5>Create a new character!</h5>
+    <form class="form new-character-form text-center">
       <div class="form-group">
         <label for="char-name">Name new character:</label>
         <input class="form-input" type="text" id="char-name" name="char-name" />
       </div>
-      <select class="form-select" aria-label="class-selection" id="class-selection">
+      <select class="form-select text-center" aria-label="class-selection" id="class-selection">
         <option selected>Select character class</option>
         <option value="Aspiring_Hero">Aspiring Hero</option>
         <option value="Warrior">Warrior</option>
         <option value="Archer">Archer</option>
       </select>
-      <div class="form-group container text-center">
-        <button type="submit" class="btn btn-primary">Create</button>
+      <div class="form-group container">
+        <button type="submit" class="btn btn-primary btn-sm">Create</button>
       </div>
     </form>
   </div>
@@ -36,7 +36,7 @@
                 <p>{{playerchar.classDesc}}</p>
             </div>
             <div class="col-sm-3">
-              <button class="btn btn-sm btn-danger char-list" data-id="{{playerchar.id}}">DELETE</button>
+              <button type="button" class="btn btn-sm btn-danger char-list" data-id="{{playerchar.id}}">DELETE</button>
             </div>
         </a>
       </div>
