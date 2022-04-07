@@ -60,3 +60,6 @@ i {
     color: brown;
 }
 
+#login {
+    cursor: pointer;
+}
