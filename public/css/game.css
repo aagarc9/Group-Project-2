@@ -2,3 +2,130 @@
     font-family: 'Press Start 2P', cursive;
     margin: 5px;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    background-color: bisque;
+}
+
+nav {
+    background-color: rgb(95, 148, 202);
+    width: 100%;
+    height: 75px;
+    margin: auto;
+}
+.header a {
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    color: brown
+}
+
+.nav-link {
+    list-style: none;
+    text-decoration: none;
+    color: brown
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    width: 10px;
+    height: 10px;
+    margin: 10px 20px;
+    padding: 0px;
+}
+
+.user-header {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(95, 148, 202);
+}
+
+.charCreate {
+    margin: auto;
+    width: 99vw;
+    height: 130px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(95, 148, 202);
+}
+
+.form-input {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.btn {
+    font-size: 14px;
+}
+
+.Characters {
+    padding: 2vw;
+    color: beige;
+    margin: auto;
+}
+
+.arena {
+    display: flex;
+    background: url("https://i.pinimg.com/originals/64/25/87/64258791ae25c63758d3b1c751dc96b9.jpg");
+}
+
+.playerchar {
+    outline: red 1px solid;
+    margin: 15px;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.playerchar a {
+    outline: red 1px solid;
+    margin: 15px;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+    color: beige;
+}
+
+.char-img {
+    outline: red 1px solid;
+    margin: 10px;
+    height: 75px;
+    width: 60px;
+    float: right;
+}
+
+.playerchar h2 h3 p {
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.gamePlay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

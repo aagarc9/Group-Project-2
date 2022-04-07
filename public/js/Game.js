@@ -24,7 +24,7 @@ let Game = {
         console.log(player)
         let getInterface = document.querySelector('.Characters');
         getInterface.innerHTML = `
-            <img src="./images/heroes/${classType.toLowerCase()}_idle.png" class="img-heroes" style="transform: scale(2)">
+            <img src="./images/heroes/${classType.toLowerCase()}_idle.png" class="img-heroes" style="transform: scale(3)">
             <div><h3> ${classType}</h3>
             <p class="health-player">Health: ${player.health}</p>
             <p>Mana: ${player.mana}</p>
@@ -39,7 +39,7 @@ let Game = {
         let getActions = document.querySelector('.actions');
         let getArena = document.querySelector('.arena');
         let getCharCreate = document.querySelector('.charCreate');
-        getCharCreate.innerHTML = ''
+        getCharCreate.style.display = 'none';
         getHeader.innerHTML = `<p> Choose the floor you would like to challenge! </p>`;
         getActions.innerHTML = `
         <a href="#" class="btn-floor floor1" onclick="Game.setFight(1)">Floor 1</a>
@@ -78,7 +78,7 @@ let Game = {
         `;
                                 
         getEnemy.innerHTML = `
-        <img src="./images/enemies/${enemy.classType}_idle.png" alt="${enemy.classType}" class="img-avatar" style="transform: scale(2)">
+        <img src="./images/enemies/${enemy.classType}_idle.png" alt="${enemy.classType}" class="img-avatar" style="transform: scale(3)">
         <div>
         <h3>${enemy.classType}</h3>
         <p class="health-enemy">Health: ${enemy.health}</p>
@@ -146,8 +146,7 @@ let Game = {
                         getEnemyHealth.innerHTML = `Health: ${enemy.health}`
                     } else getPlayerHealth.innerHTML = `Health: ${player.health}`
                 }
-            } 
-            // else if (playerSpeed <= enemySpeed) {
+                            // else if (playerSpeed <= enemySpeed) {
             //     let playerAttackValues = playerAttack();
             //     let playerTotalDamage = playerAttackValues[0] * playerAttackValues[1];
             //     let enemyAttackValues = enemyAttack();
@@ -169,6 +168,16 @@ let Game = {
             //             getPlayerHealth.innerHTML = `Health: 0`;
             //             getEnemyHealth.innerHTML = `Health: + ${enemy.health}`
             //         } else getPlayerHealth.innerHTML = `Health: ${player.health}`
+            } 
+        },
+
+        calcBlock: function() {
+            let playerSpeed = player.speed;
+            let enemySpeed = enemy.speed;
+            let getHeader = document.querySelector('.user-header');
+            let getPlayerHealth = document.querySelector('.health-player')
+            let getEnemyHealth = document.querySelector('.health-enemy')
+
             }
         }
         
