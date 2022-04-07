@@ -72,7 +72,11 @@ let Game = {
         console.log(enemy.classType)
 
         getHeader.innerHTML = `<p>Choose Your Action!</p>`;
-        getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="Game.calcAttack()"> Attack!</a>`;
+        getActions.innerHTML = `
+        <a href="#" class="btn-prefight" onclick="Game.calcAttack()"> Attack!</a>
+        <a href="#" class="btn-prefight" onclick="Game.calcBlock()"> Defend </a>
+        `;
+                                
         getEnemy.innerHTML = `
         <img src="./images/enemies/${enemy.classType}_idle.png" alt="${enemy.classType}" class="img-avatar" style="transform: scale(2)">
         <div>
