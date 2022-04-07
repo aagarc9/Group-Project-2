@@ -41,6 +41,9 @@ let Game = {
         let getCharCreate = document.querySelector('.charCreate');
         getCharCreate.style.display = 'none';
         getHeader.innerHTML = `<p> Choose the floor you would like to challenge! </p>`;
+        const message = new TextMessage(
+            text)
+        message.init("Choose the floor you would like to challenge!")
         getActions.innerHTML = `
         <a href="#" class="btn-floor floor1" onclick="Game.setFight(1)">Floor 1</a>
         <a href="#" class="btn-floor floor2" onclick="Game.setFight(2)">Floor 2</a>
