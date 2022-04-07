@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const {PlayerChar } = require("../models");
+const { PlayerChar } = require("../models");
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -13,6 +13,28 @@ router.get('/', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+router.get('/characters/:id', async (req, res) => {
+  try {
+    const playercharData = await PlayerChar.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const player = playercharData.get({ plain: true });
+
+    res.render('game', {
+      ...player,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // Use middleware to prevent access to 'profile' route, require authorization or sign-in.
