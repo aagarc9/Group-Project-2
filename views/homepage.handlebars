@@ -1,5 +1,9 @@
-<div class="mainPage">
-    <h2>Ready to Play? </h2>
-    <p>Click Login to Start!</p><br>
-    <p>(Description)</p>
-</div>
+{{#if logged_in}}
+
+{{else}}
+    <div class="mainPage">
+        <h2>Ready to Play? </h2>
+        <p>Click Login to Start!</p><br>
+        <p>(Description)</p>
+    </div>
+{{/if}}

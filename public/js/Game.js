@@ -35,10 +35,12 @@ let Game = {
            ` 
     },
     setBattle: function() {
-        let getHeader = document.querySelector('.header');
+        let getHeader = document.querySelector('.user-header');
         let getActions = document.querySelector('.actions');
         let getArena = document.querySelector('.arena');
-        getHeader.innerHTML = `<p> Choose your floor</p>`;
+        let getCharCreate = document.querySelector('.charCreate');
+        getCharCreate.innerHTML = ''
+        getHeader.innerHTML = `<p> Choose the floor you would like to challenge! </p>`;
         getActions.innerHTML = `
         <a href="#" class="btn-floor floor1" onclick="Game.setFight(1)">Floor 1</a>
         <a href="#" class="btn-floor floor2" onclick="Game.setFight(2)">Floor 2</a>
@@ -47,7 +49,7 @@ let Game = {
         getArena.style.visibility = `visible`;
     },
     setFight: function(floorChoice) {
-        let getHeader = document.querySelector('.header');
+        let getHeader = document.querySelector('.user-header');
         let getActions = document.querySelector('.actions');
         let getEnemy = document.querySelector('.enemy');
         //Enemy Types
@@ -88,7 +90,7 @@ let Game = {
         calcAttack: function() {
             let playerSpeed = player.speed;
             let enemySpeed = enemy.speed;
-        
+            let getHeader = document.querySelector('.user-header');
             let getPlayerHealth = document.querySelector('.health-player')
             let getEnemyHealth = document.querySelector('.health-enemy')
         
@@ -125,8 +127,9 @@ let Game = {
                 alert(`Player hits the enemy for ${playerTotalDamage} damage.`)
         
                 if (enemy.health <= 0) {
-                    alert(`The ${classType} has been defeated!`);
-                    getPlayerHealth.innerHTML = `Health: + ${player.health}`
+                    alert(`The ${enemy.classType} has been defeated!`);
+                    getHeader.innerHTML = `<p>You have defeated your enemy!</p>`
+                    getPlayerHealth.innerHTML = `Health: ${player.health}`
                     getEnemyHealth.innerHTML = `Health: 0`;
                 } else {
                     getEnemyHealth.innerHTML = `Health: ${enemy.health}`
@@ -134,8 +137,9 @@ let Game = {
                     alert(`${enemy.classType} hits the player for ${enemyTotalDamage} damage.`)
                     if (player.health <= 0) {
                         alert(`You have been defeated!`);
+                        getHeader.innerHTML = `<p>You have been defeated!</p>`
                         getPlayerHealth.innerHTML = `Health: 0`;
-                        getEnemyHealth.innerHTML = `Health: + ${enemy.health}`
+                        getEnemyHealth.innerHTML = `Health: ${enemy.health}`
                     } else getPlayerHealth.innerHTML = `Health: ${player.health}`
                 }
             } 
