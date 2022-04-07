@@ -120,8 +120,6 @@ i {
 .playerchar h2 h3 p {
     padding: 5px;
     margin: 5px;
-    text-decoration: none;
-    list-style: none;
 }
 
 .gamePlay {
