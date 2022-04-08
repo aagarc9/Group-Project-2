@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 12px;
+    background-color: bisque;
 }
 
 nav {
@@ -48,7 +49,7 @@ i {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     margin: 0;
-    padding: 50px;
+    padding: 10px;
 }    
 
 .row h2 {
@@ -58,22 +59,60 @@ i {
 input {
     padding: 5px;
     margin: 10px;
-    width: 400px;
+    /* width: 400px; */
     height: 30px;
+    
 }
 
 #email-login {
-    margin-left: 35px;
+    margin-left: 36px;
 }
 
 #name-signup {
-    margin-left: 47px;
+    margin-left: 48px;
 }
 
 #email-signup {
-    margin-left: 35px;
+    margin-left: 36px;
 }
 
 .row button {
     margin-top: 20px;
 }
+@media screen and (max-width: 767px) {
+    .row {
+        flex-direction: column;
+        padding: 5px;
+    }
+/* @media only screen and (min-width: 768px) and (max-width: 913px) {  
+    #email-login {
+        margin-left: 900px;
+    
+    }   
+    
+} */
+}
+    
+
+    /* input { 
+        padding: 2px;
+        margin: 5px;
+        width: 200px;
+        height: 20px;
+    } */
+
+/* @media (min-width: 768px) and (max-width: 992px) {
+    .row {
+        flex-direction: column;
+        padding: 5px;
+    }
+} */
+/* @media screen and (max-width: 1186px) {
+    #password-signup {
+        margin-left: -2px;
+    }
+
+    #password-login {
+        margin-left: -2px;
+    }
+} */
