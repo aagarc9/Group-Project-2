@@ -104,6 +104,12 @@ let Game = {
         },
 
         calcAttack: function() {
+            const sfx = {
+                swordhit: new Howl({
+                    src: './sounds/sword_impact.mp3',
+                    loop: false
+                })
+            }
             let playerSpeed = player.speed;
             let enemySpeed = enemy.speed;
             let getHeader = document.querySelector('.user-header');
@@ -139,7 +145,7 @@ let Game = {
                 let enemyAttackValues = enemyAttack();
                 let enemyTotalDamage = enemyAttackValues[0] * enemyAttackValues[1];
                 enemy.health = enemy.health - playerTotalDamage;
-        
+                sfx.swordhit.play()
                 alert(`You swing your sword at the enemy for ${playerTotalDamage} damage.`)
         
                 if (enemy.health <= 0) {
@@ -184,6 +190,13 @@ let Game = {
         },
 
         calcBlock: function() {
+            const sfx = {
+                shieldBlock: new Howl({
+                    src: './sounds/shield_block.mp3',
+                    loop: false
+                })
+            }
+            
             let enemyAttack = function() {
                 let baseDamage = enemy.strength * enemy.agility /1000;
                 let actualDamage = baseDamage
@@ -198,7 +211,10 @@ let Game = {
             let getPlayerHealth = document.querySelector('.health-player')
             let getEnemyHealth = document.querySelector('.health-enemy')
             player.health = player.health - Math.max(0, enemyTotalDamage - 2 * player.defense);
-            if (player.classType == 'Warrior'){alert(`You raise your shield and brace for an attack!`)}
+            if (player.classType == 'Warrior'){
+                alert(`You raise your shield and brace for an attack!`)
+                sfx.shieldBlock.play()
+            }
             else if (player.classType == 'Aspiring_Hero'){alert('You flail about wildly trying not to get hit.')}
             else if (player.classType == 'Archer'){alert('You deftly attempt to sidestep the enemy attack.')}
             getEnemyHealth.innerHTML = `Health: ${enemy.health}`
@@ -212,7 +228,13 @@ let Game = {
         
             },
 
-            calcShoot: function() {
+        calcShoot: function() {
+            const sfx = {
+                arrowhit: new Howl({
+                    src: './sounds/arrow_impact.mp3',
+                    loop: false
+                })
+            }
             let playerSpeed = player.speed;
             let enemySpeed = enemy.speed;
             let getHeader = document.querySelector('.user-header');
@@ -242,7 +264,7 @@ let Game = {
                 let enemyAttackValues = enemyAttack();
                 let enemyTotalDamage = enemyAttackValues[0] * enemyAttackValues[1];
                 enemy.health = enemy.health - playerTotalDamage;
-        
+                sfx.arrowhit.play()
                 alert(`You nock and fire an arrow for ${playerTotalDamage} damage.`)
         
                 if (enemy.health <= 0) {
