@@ -24,7 +24,7 @@ let Game = {
         console.log(player)
         let getInterface = document.querySelector('.Characters');
         getInterface.innerHTML = `
-            <img src="./images/heroes/${classType.toLowerCase()}_idle.png" class="img-heroes" style="transform: scale(3)">
+            <div class="hero_anim"><img src="./images/heroes/${classType.toLowerCase()}_sheet.png" class="img-heroes" style="transform: scale(3)"></div>
             <div><h3> ${classType}</h3>
             <p class="health-player">Health: ${player.health}</p>
             <p>Mana: ${player.mana}</p>
@@ -90,7 +90,7 @@ let Game = {
             getActions.innerHTML += '<a href="#" class="btn-prefight" onclick="Game.calcShoot()"> Fire an Arrow! </a>'
         }                    
         getEnemy.innerHTML = `
-        <img src="./images/enemies/${enemy.classType}_idle.png" alt="${enemy.classType}" class="img-avatar" style="transform: scale(3)">
+        <div class="enemy_anim"><img src="./images/enemies/${enemy.classType}_idle.png" alt="${enemy.classType}" class="img-avatar" style="transform: scale(3)"></div>
         <div>
         <h3>${enemy.classType}</h3>
         <p class="health-enemy">Health: ${enemy.health}</p>
