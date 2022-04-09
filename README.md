@@ -44,7 +44,7 @@ If running the HEROKU hosted API, click 'login'
 
 
 ## Video/DEMO Walkthrough
-
+![DEMO GIF of API](./public/images/demo-pxl-war-api.gif)
 ## Credits and Contributors
 | Name | Link to GitHub Profile |
 | :---: | :---: |
