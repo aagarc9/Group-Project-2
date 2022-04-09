@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Enemy extends Model {}
+class PlayerChar extends Model {}
 
-Enemy.init(
+PlayerChar.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,13 +11,10 @@ Enemy.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        enemy_name: {
+        character_name: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            validate: {
-                isAlpha: true,
-            },
         },
         classType: {
             type: DataTypes.STRING,
@@ -74,14 +71,22 @@ Enemy.init(
                 isNumeric: true,
             },
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+                unique: false
+            },
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'enemy',
+        modelName: 'playerchar',
     }
 );
 
-module.exports = Enemy;
+module.exports = PlayerChar;

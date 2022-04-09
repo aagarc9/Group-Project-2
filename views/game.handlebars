@@ -1,0 +1,50 @@
+<div class="user-header"> Welcome to the Tower of Courage, {{name}}!</div>
+
+  <div class="container col-12 border p-2 text-center charCreate " id="createCharacter">
+    <h5>Create a new character!</h5>
+    <form class="form new-character-form text-center">
+      <div class="form-group">
+        <label for="char-name">Name new character:</label>
+        <input class="form-input" type="text" id="char-name" name="char-name" />
+      </div>
+      <select class="form-select text-center" aria-label="class-selection" id="class-selection">
+        <option selected>Select character class</option>
+        <option value="Aspiring_Hero">Aspiring Hero</option>
+        <option value="Warrior">Warrior</option>
+        <option value="Archer">Archer</option>
+      </select>
+      <div class="form-group container">
+        <button type="submit" class="btn btn-primary btn-sm">Create</button>
+      </div>
+    </form>
+  </div>
+
+
+{{#if playerchars.length}}
+
+<div class="arena">
+  <div class="Characters"> Please select the character you would like to use.
+
+      {{#each playerchars as |playerchar|}}
+    <div class="playerchar">
+        <a href="#" onclick="Game.gameStart(`{{playerchar.classType}}`)">
+            <img class="char-img" src="/images/heroes/{{playerchar.classType}}_idle.png" alt="{{playerchar.classType}}" style="transform: scale(2)">
+            <div>
+                <h2>{{playerchar.character_name}}</h2>
+                <h3>{{playerchar.classType}}</h3>
+                <p>{{playerchar.classDesc}}</p>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-sm btn-danger char-list" data-id="{{playerchar.id}}">DELETE</button>
+            </div>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+    <div class="enemy"></div>
+    </div>
+    
+    <div class="actions"></div>
+    {{!-- <div class="enemy"></div> --}}
+    
+{{/if}}

@@ -1,14 +1,14 @@
 const User = require("./User");
-// const Equipment = require('./Equipment');
-const Weapon = require('./Weapon');
+const PlayerChar = require('./PlayerChar');
+// const Enemy = require('./Enemy');
 
-User.hasOne(Weapon, {
+User.hasMany(PlayerChar, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
-Weapon.belongsTo(User, {
+PlayerChar.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Weapon };
+module.exports = { User, PlayerChar };
