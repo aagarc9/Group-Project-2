@@ -29,48 +29,48 @@ PlayerChar.init(
             allowNull: true,
             unique: true,
         },
-        health: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
-        },
-        mana: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
-        },
-        strength: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
-        },
-        agility: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
-        },
-        defense: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
-        },
-        speed: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
-        },
+        // health: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         isNumeric: true,
+        //     },
+        // },
+        // mana: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         isNumeric: true,
+        //     },
+        // },
+        // strength: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         isNumeric: true,
+        //     },
+        // },
+        // agility: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         isNumeric: true,
+        //     },
+        // },
+        // defense: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         isNumeric: true,
+        //     },
+        // },
+        // speed: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     validate: {
+        //         isNumeric: true,
+        //     },
+        // },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
