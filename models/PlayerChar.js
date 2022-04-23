@@ -13,13 +13,15 @@ PlayerChar.init(
         },
         character_name: {
             type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
+            allowNull: true,
+            unique: false,
+            defaultValue: 'John Doe',
         },
         classType: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
+            unique: false,
+            defaultValue: 'Warrior',
             validate: {
                 isAlpha: true,
             },
@@ -27,11 +29,13 @@ PlayerChar.init(
         classDesc: {
             type: DataTypes.STRING,
             allowNull: true,
-            unique: true,
+            unique: false,
+            defaultValue: 'A nobody starting his journey',
         },
         health: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 200,
             validate: {
                 isNumeric: true,
             },
@@ -39,6 +43,7 @@ PlayerChar.init(
         mana: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 200,
             validate: {
                 isNumeric: true,
             },
@@ -46,6 +51,7 @@ PlayerChar.init(
         strength: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 200,
             validate: {
                 isNumeric: true,
             },
@@ -53,6 +59,7 @@ PlayerChar.init(
         agility: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 200,
             validate: {
                 isNumeric: true,
             },
@@ -60,6 +67,7 @@ PlayerChar.init(
         defense: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 200,
             validate: {
                 isNumeric: true,
             },
@@ -67,6 +75,7 @@ PlayerChar.init(
         speed: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 200,
             validate: {
                 isNumeric: true,
             },
@@ -76,7 +85,6 @@ PlayerChar.init(
             references: {
                 model: 'user',
                 key: 'id',
-                unique: false
             },
         },
     },
